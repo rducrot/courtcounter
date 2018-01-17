@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+
+    <string name="playerOne">Player 1</string>
+    <string name="playerTwo">Player 2</string>
+    <string name="initialPrizes">6</string>
+    <string name="initialCards">47</string>
+    <string name="initialPokemons">1</string>
+    <string name="prize">Draw a prize</string>
+    <string name="remaining">Remaining Cards</string>
+    <string name="active">Active Pokemons</string>
+    <string name="plus">+1</string>
+    <string name="minus">-1</string>
+    <string name="reset">reset</string>
+
+    <string name="addCardsAlert">You can\'t have more than a total of 60 cards!\n(Prizes + Remaining Cards + Active Pokemons)</string>
+    <string name="addPokemonAlert">You can\'t have more than 6 active Pokemons!</string>
+    <string name="wonPrizes">No more remaining prizes!\n%1$s won the match!</string>
+    <string name="wonCards">No more remaining cards!\n%1$s won the match!</string>
+    <string name="wonPokemons">No more active Pokemon!\n%1$s won the match!</string>
+    <string name="partyOver">Party is over!\nPress \"Reset\" for a new party.</string>
+    <string name="ok">Ok</string>
+
+    <string name="logo">The Pokemon Trading Card Game logo.</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margin and padding -->
+    <dimen name="mainMargin">5dp</dimen>
+    <dimen name="regularMargin">10dp</dimen>
+    <dimen name="bigMargin">15dp</dimen>
+    <dimen name="biggerMargin">20dp</dimen>
+    <dimen name="largeMargin">24dp</dimen>
+    <dimen name="largerMargin">32dp</dimen>
+
+    <dimen name="mainPadding">5dp</dimen>
+    <dimen name="regularPadding">10dp</dimen>
+    <dimen name="bigPadding">15dp</dimen>
+    <dimen name="biggerPadding">20dp</dimen>
+
+    <!-- Containers -->
+    <dimen name="infosTextSize">20dp</dimen>
+
+    <!-- Images sizes -->
+    <dimen name="logoWidth">150dp</dimen>
+    <dimen name="logoHeight">90dp</dimen>
+    <dimen name="infosImage">30dp</dimen>
+
+    <!-- Texts sizes -->
+    <dimen name="nameText">14sp</dimen>
+    <dimen name="infosText">16sp</dimen>
+    <dimen name="prizeText">56sp</dimen>
+</resources>

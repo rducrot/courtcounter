@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/rootView"
+    tools:context="com.example.android.courtcounter.MainActivity">
+
+    <RelativeLayout
+        style="@style/mainView">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/logoImage"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo"/>
+
+        <LinearLayout
+            style="@style/mainGameContainer"
+            android:layout_below="@id/logo">
+
+            <LinearLayout
+                style="@style/playerContainer">
+
+                <TextView
+                    style="@style/playerName"
+                    android:text="@string/playerOne"/>
+
+                <LinearLayout
+                    style="@style/informationsContainer">
+
+                    <TextView
+                        android:id="@+id/playerOneCards"
+                        style="@style/textInfos"
+                        android:text="@string/initialCards"/>
+
+                    <ImageView
+                        style="@style/imageInfos"
+                        android:src="@drawable/cards"/>
+
+                    <TextView
+                        android:id="@+id/playerOnePokemons"
+                        style="@style/textInfos"
+                        android:text="@string/initialPokemons"/>
+
+                    <ImageView
+                        style="@style/imageInfos"
+                        android:src="@drawable/pokemon"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/playerOnePrizes"
+                    style="@style/remainingPrize"
+                    android:text="@string/initialPrizes" />
+
+                <Button
+                    android:id="@+id/playerOneDrawPrize"
+                    style="@style/prizeButton"
+                    android:text="@string/prize" />
+
+                <TextView
+                    style="@style/titleInfos"
+                    android:text="@string/remaining"/>
+
+                <LinearLayout
+                    style="@style/infosButtonsContainer">
+
+                    <Button
+                        android:id="@+id/playerOneMinusCard"
+                        style="@style/infosButton"
+                        android:text="@string/minus"/>
+
+                    <ImageView
+                        style="@style/imageInfosButton"
+                        android:src="@drawable/cards" />
+
+                    <Button
+                        android:id="@+id/playerOnePlusCard"
+                        style="@style/infosButton"
+                        android:text="@string/plus"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/titleInfos"
+                    android:text="@string/active"/>
+
+                <LinearLayout
+                    style="@style/infosButtonsContainer">
+
+                    <Button
+                        android:id="@+id/playerOneMinusPokemon"
+                        style="@style/infosButton"
+                        android:text="@string/minus"/>
+
+                    <ImageView
+                        style="@style/imageInfosButton"
+                        android:src="@drawable/pokemon" />
+
+                    <Button
+                        android:id="@+id/playerOnePlusPokemon"
+                        style="@style/infosButton"
+                        android:text="@string/plus"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/separation"/>
+
+            <LinearLayout
+                style="@style/playerContainer">
+
+                <TextView
+                    style="@style/playerName"
+                    android:text="@string/playerTwo" />
+
+                <LinearLayout
+                    style="@style/informationsContainer">
+
+                    <TextView
+                        android:id="@+id/playerTwoCards"
+                        style="@style/textInfos"
+                        android:text="@string/initialCards"/>
+
+                    <ImageView
+                        style="@style/imageInfos"
+                        android:src="@drawable/cards"/>
+
+                    <TextView
+                        android:id="@+id/playerTwoPokemons"
+                        style="@style/textInfos"
+                        android:text="@string/initialPokemons"/>
+
+                    <ImageView
+                        style="@style/imageInfos"
+                        android:src="@drawable/pokemon"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/playerTwoPrizes"
+                    style="@style/remainingPrize"
+                    android:text="@string/initialPrizes" />
+
+                <Button
+                    android:id="@+id/playerTwoDrawPrize"
+                    style="@style/prizeButton"
+                    android:text="@string/prize" />
+
+                <TextView
+                    style="@style/titleInfos"
+                    android:text="@string/remaining"/>
+
+                <LinearLayout
+                    style="@style/infosButtonsContainer">
+
+                    <Button
+                        android:id="@+id/playerTwoMinusCard"
+                        style="@style/infosButton"
+                        android:text="@string/minus"/>
+
+                    <ImageView
+                        style="@style/imageInfosButton"
+                        android:src="@drawable/cards"/>
+
+                    <Button
+                        android:id="@+id/playerTwoPlusCard"
+                        style="@style/infosButton"
+                        android:text="@string/plus"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/titleInfos"
+                    android:text="@string/active"/>
+
+                <LinearLayout
+                    style="@style/infosButtonsContainer">
+
+                    <Button
+                        android:id="@+id/playerTwoMinusPokemon"
+                        style="@style/infosButton"
+                        android:text="@string/minus"/>
+
+                    <ImageView
+                        style="@style/imageInfosButton"
+                        android:src="@drawable/pokemon"/>
+
+                    <Button
+                        android:id="@+id/playerTwoPlusPokemon"
+                        style="@style/infosButton"
+                        android:text="@string/plus"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/reset"
+        style="@style/resetButton"
+        android:text="@string/reset" />
+    </RelativeLayout>
+</ScrollView>
