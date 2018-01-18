@@ -15,6 +15,7 @@
 
     <!-- Containers -->
     <dimen name="infosTextSize">20dp</dimen>
+    <dimen name="separatorHeight">400dp</dimen>
 
     <!-- Images sizes -->
     <dimen name="logoWidth">150dp</dimen>

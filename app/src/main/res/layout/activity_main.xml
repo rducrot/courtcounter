@@ -5,25 +5,27 @@
     style="@style/rootView"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         style="@style/mainView">
 
         <ImageView
+            android:id="@+id/logo"
             style="@style/logoImage"
             android:contentDescription="@string/logo"
             android:src="@drawable/logo"/>
 
-        <LinearLayout
-            style="@style/mainGameContainer">
-
             <LinearLayout
-                style="@style/playerContainer">
+                style="@style/playerContainer"
+                android:layout_toLeftOf="@id/separator"
+                android:layout_below="@id/logo">
 
                 <TextView
+                    android:layout_alignParentTop="true"
                     style="@style/playerName"
                     android:text="@string/playerOne"/>
 
                 <LinearLayout
+                    android:layout_below=""
                     style="@style/informationsContainer">
 
                     <TextView
@@ -101,10 +103,14 @@
             </LinearLayout>
 
             <View
-                style="@style/separation"/>
+                android:id="@+id/separator"
+                style="@style/separation"
+                android:layout_below="@+id/logo"/>
 
             <LinearLayout
-                style="@style/playerContainer">
+                style="@style/playerContainer"
+                android:layout_toRightOf="@+id/separator"
+                android:layout_below="@id/logo">
 
                 <TextView
                     style="@style/playerName"
@@ -186,11 +192,11 @@
                         android:text="@string/plus"/>
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
     <Button
         android:id="@+id/reset"
         style="@style/resetButton"
+        android:layout_below="@id/separator"
         android:text="@string/reset" />
-    </LinearLayout>
+    </RelativeLayout>
 </ScrollView>
