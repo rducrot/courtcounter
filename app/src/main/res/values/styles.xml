@@ -21,6 +21,7 @@
     </style>
 
     <style name="mainView" parent="mainMatchParent">
+        <item name="android:orientation">vertical</item>
         <item name="android:background">@color/orangePrimary</item>
     </style>
 
@@ -28,8 +29,7 @@
         <item name="android:layout_width">@dimen/logoWidth</item>
         <item name="android:layout_height">@dimen/logoHeight</item>
         <item name="android:layout_marginTop">@dimen/regularMargin</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
     <style name="mainGameContainer">
@@ -83,7 +83,7 @@
     <style name="imageInfos">
         <item name="android:layout_width">@dimen/infosImage</item>
         <item name="android:layout_height">@dimen/infosImage</item>
-        <item name="android:layout_marginRight">@dimen/bigMargin</item>
+        <item name="android:layout_marginRight">@dimen/biggerMargin</item>
     </style>
 
     <style name="remainingPrize">
@@ -129,9 +129,8 @@
     <style name="resetButton" parent="mainWrapContent">
         <item name="android:textColor">@color/orangeDark</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginBottom">@dimen/biggerMargin</item>
-        <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_margin">@dimen/largerMargin</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
     </style>
 
     <style name="separation">

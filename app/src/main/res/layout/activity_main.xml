@@ -5,18 +5,16 @@
     style="@style/rootView"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <RelativeLayout
+    <LinearLayout
         style="@style/mainView">
 
         <ImageView
-            android:id="@+id/logo"
             style="@style/logoImage"
             android:contentDescription="@string/logo"
             android:src="@drawable/logo"/>
 
         <LinearLayout
-            style="@style/mainGameContainer"
-            android:layout_below="@id/logo">
+            style="@style/mainGameContainer">
 
             <LinearLayout
                 style="@style/playerContainer">
@@ -194,5 +192,5 @@
         android:id="@+id/reset"
         style="@style/resetButton"
         android:text="@string/reset" />
-    </RelativeLayout>
+    </LinearLayout>
 </ScrollView>

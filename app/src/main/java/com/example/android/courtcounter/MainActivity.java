@@ -77,6 +77,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         plTwoPokemons = Integer.parseInt(getString(R.string.initialPokemons));
 
         partyOver = false;
+
+        //Gets the values from saveInstanceState when the view is switched.
+        if(savedInstanceState != null){
+            //Restores the values of the variables.
+            plOnePrizes = savedInstanceState.getInt("playerOnePrizes");
+            plOneCards = savedInstanceState.getInt("playerOneCards");
+            plOnePokemons = savedInstanceState.getInt("playerOnePokemons");
+            plTwoPrizes = savedInstanceState.getInt("playerTwoPrizes");
+            plTwoCards = savedInstanceState.getInt("playerTwoCards");
+            plTwoPokemons = savedInstanceState.getInt("playerTwoPokemons");
+            //Displays the values on the correct views.
+            mPlOnePrizes.setText(String.valueOf(savedInstanceState.getInt("playerOnePrizes")));
+            mPlOneCards.setText(String.valueOf(savedInstanceState.getInt("playerOneCards")));
+            mPlOnePokemons.setText(String.valueOf(savedInstanceState.getInt("playerOnePokemons")));
+            mPlTwoPrizes.setText(String.valueOf(savedInstanceState.getInt("playerTwoPrizes")));
+            mPlTwoCards.setText(String.valueOf(savedInstanceState.getInt("playerTwoCards")));
+            mPlTwoPokemons.setText(String.valueOf(savedInstanceState.getInt("playerTwoPokemons")));
+            //Disables the buttons if the party is over.
+            partyOver = savedInstanceState.getBoolean("partyOver");
+        }
+
     }
 
     /**
@@ -131,6 +152,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
         }
+    }
+
+    /**
+     * Method to save the values.
+     * @param outState
+     */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("playerOnePrizes", plOnePrizes);
+        outState.putInt("playerOneCards", plOneCards);
+        outState.putInt("playerOnePokemons", plOnePokemons);
+        outState.putInt("playerTwoPrizes", plTwoPrizes);
+        outState.putInt("playerTwoCards", plTwoCards);
+        outState.putInt("playerTwoPokemons", plTwoPokemons);
+        outState.putBoolean("partyOver", partyOver);
+    }
+
+    /**
+     * Method to restore the values.
+     * @param savedInstanceState
+     */
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        plOnePrizes = savedInstanceState.getInt("playerOnePrizes");
+        plOneCards = savedInstanceState.getInt("playerOneCards");
+        plOnePokemons = savedInstanceState.getInt("playerOnePokemons");
+        plTwoPrizes = savedInstanceState.getInt("playerTwoPrizes");
+        plTwoCards = savedInstanceState.getInt("playerTwoCards");
+        plTwoPokemons = savedInstanceState.getInt("playerTwoPokemons");
+        partyOver = savedInstanceState.getBoolean("partyOver");
     }
 
     /**
