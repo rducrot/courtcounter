@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             plOnePokemons = savedInstanceState.getInt("playerOnePokemons");
             plTwoPrizes = savedInstanceState.getInt("playerTwoPrizes");
             plTwoCards = savedInstanceState.getInt("playerTwoCards");
+            plTwoCards = savedInstanceState.getInt("playerTwoCards");
             plTwoPokemons = savedInstanceState.getInt("playerTwoPokemons");
             //Displays the values on the correct views.
             mPlOnePrizes.setText(String.valueOf(savedInstanceState.getInt("playerOnePrizes")));

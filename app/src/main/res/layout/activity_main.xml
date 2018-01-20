@@ -5,198 +5,275 @@
     style="@style/rootView"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         style="@style/mainView">
 
         <ImageView
             android:id="@+id/logo"
             style="@style/logoImage"
             android:contentDescription="@string/logo"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                style="@style/playerContainer"
-                android:layout_toLeftOf="@id/separator"
-                android:layout_below="@id/logo">
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/playerName"
+            android:text="@string/playerOne"
+            app:layout_constraintEnd_toStartOf="@+id/separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-                <TextView
-                    android:layout_alignParentTop="true"
-                    style="@style/playerName"
-                    android:text="@string/playerOne"/>
+        <TextView
+            android:id="@+id/playerOneCards"
+            style="@style/textInfos"
+            android:text="@string/initialCards"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-                <LinearLayout
-                    android:layout_below=""
-                    style="@style/informationsContainer">
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/imageInfos"
+            android:src="@drawable/cards"
+            app:layout_constraintEnd_toStartOf="@+id/playerOnePokemons"
+            app:layout_constraintStart_toEndOf="@+id/playerOneCards"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-                    <TextView
-                        android:id="@+id/playerOneCards"
-                        style="@style/textInfos"
-                        android:text="@string/initialCards"/>
+        <TextView
+            android:id="@+id/playerOnePokemons"
+            style="@style/textInfos"
+            android:text="@string/initialPokemons"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-                    <ImageView
-                        style="@style/imageInfos"
-                        android:src="@drawable/cards"/>
+        <ImageView
+            android:id="@+id/imageView3"
+            style="@style/imageInfos"
+            android:src="@drawable/pokemon"
+            app:layout_constraintEnd_toStartOf="@+id/separator"
+            app:layout_constraintStart_toEndOf="@id/playerOnePokemons"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-                    <TextView
-                        android:id="@+id/playerOnePokemons"
-                        style="@style/textInfos"
-                        android:text="@string/initialPokemons"/>
+        <TextView
+            android:id="@+id/playerOnePrizes"
+            style="@style/remainingPrize"
+            android:text="@string/initialPrizes"
+            app:layout_constraintEnd_toStartOf="@+id/separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-                    <ImageView
-                        style="@style/imageInfos"
-                        android:src="@drawable/pokemon"/>
-                </LinearLayout>
+        <Button
+            android:id="@+id/playerOneDrawPrize"
+            style="@style/prizeButton"
+            android:text="@string/prize"
+            app:layout_constraintEnd_toStartOf="@+id/separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playerOnePrizes" />
 
-                <TextView
-                    android:id="@+id/playerOnePrizes"
-                    style="@style/remainingPrize"
-                    android:text="@string/initialPrizes" />
+        <TextView
+            android:id="@+id/textView"
+            style="@style/titleInfos"
+            android:text="@string/remaining"
+            app:layout_constraintEnd_toStartOf="@+id/separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playerOneDrawPrize"/>
 
-                <Button
-                    android:id="@+id/playerOneDrawPrize"
-                    style="@style/prizeButton"
-                    android:text="@string/prize" />
+        <Button
+            android:id="@+id/playerOneMinusCard"
+            style="@style/infosButton"
+            android:text="@string/minus"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"/>
 
-                <TextView
-                    style="@style/titleInfos"
-                    android:text="@string/remaining"/>
+        <ImageView
+            android:id="@+id/imageView2"
+            style="@style/imageInfosButton"
+            android:src="@drawable/cards"
+            app:layout_constraintEnd_toStartOf="@id/playerOnePlusCard"
+            app:layout_constraintStart_toEndOf="@id/playerOneMinusCard"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                <LinearLayout
-                    style="@style/infosButtonsContainer">
+        <Button
+            android:id="@+id/playerOnePlusCard"
+            style="@style/infosButton"
+            android:text="@string/plus"
+            app:layout_constraintEnd_toStartOf="@+id/separator"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@id/textView"/>
 
-                    <Button
-                        android:id="@+id/playerOneMinusCard"
-                        style="@style/infosButton"
-                        android:text="@string/minus"/>
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/titleInfos"
+            android:text="@string/active"
+            app:layout_constraintEnd_toStartOf="@+id/separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView2"/>
 
-                    <ImageView
-                        style="@style/imageInfosButton"
-                        android:src="@drawable/cards" />
+        <Button
+            android:id="@+id/playerOneMinusPokemon"
+            style="@style/infosButton"
+            android:text="@string/minus"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView2"/>
 
-                    <Button
-                        android:id="@+id/playerOnePlusCard"
-                        style="@style/infosButton"
-                        android:text="@string/plus"/>
-                </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView4"
+            style="@style/imageInfosButton"
+            android:src="@drawable/pokemon"
+            app:layout_constraintEnd_toStartOf="@id/playerOnePlusPokemon"
+            app:layout_constraintStart_toEndOf="@id/playerOneMinusPokemon"
+            app:layout_constraintTop_toBottomOf="@id/textView2"/>
 
-                <TextView
-                    style="@style/titleInfos"
-                    android:text="@string/active"/>
+        <Button
+            android:id="@+id/playerOnePlusPokemon"
+            style="@style/infosButton"
+            android:text="@string/plus"
+            app:layout_constraintEnd_toStartOf="@+id/separator"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@id/textView2"/>
 
-                <LinearLayout
-                    style="@style/infosButtonsContainer">
+        <View
+            android:id="@+id/separator"
+            style="@style/separation"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="@dimen/mainMargin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-                    <Button
-                        android:id="@+id/playerOneMinusPokemon"
-                        style="@style/infosButton"
-                        android:text="@string/minus"/>
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/playerName"
+            android:text="@string/playerTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/separator"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-                    <ImageView
-                        style="@style/imageInfosButton"
-                        android:src="@drawable/pokemon" />
+        <TextView
+            android:id="@+id/playerTwoCards"
+            style="@style/textInfos"
+            android:text="@string/initialCards"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/separator"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-                    <Button
-                        android:id="@+id/playerOnePlusPokemon"
-                        style="@style/infosButton"
-                        android:text="@string/plus"/>
-                </LinearLayout>
-            </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView5"
+            style="@style/imageInfos"
+            android:src="@drawable/cards"
+            app:layout_constraintEnd_toStartOf="@+id/playerTwoPokemons"
+            app:layout_constraintStart_toEndOf="@id/playerTwoCards"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <View
-                android:id="@+id/separator"
-                style="@style/separation"
-                android:layout_below="@+id/logo"/>
+        <TextView
+            android:id="@+id/playerTwoPokemons"
+            style="@style/textInfos"
+            android:text="@string/initialPokemons"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <LinearLayout
-                style="@style/playerContainer"
-                android:layout_toRightOf="@+id/separator"
-                android:layout_below="@id/logo">
+        <ImageView
+            android:id="@+id/imageView6"
+            style="@style/imageInfos"
+            android:src="@drawable/pokemon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/playerTwoPokemons"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-                <TextView
-                    style="@style/playerName"
-                    android:text="@string/playerTwo" />
+        <TextView
+            android:id="@+id/playerTwoPrizes"
+            style="@style/remainingPrize"
+            android:text="@string/initialPrizes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/separator"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                <LinearLayout
-                    style="@style/informationsContainer">
+        <Button
+            android:id="@+id/playerTwoDrawPrize"
+            style="@style/prizeButton"
+            android:text="@string/prize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/separator"
+            app:layout_constraintTop_toBottomOf="@+id/playerTwoPrizes" />
 
-                    <TextView
-                        android:id="@+id/playerTwoCards"
-                        style="@style/textInfos"
-                        android:text="@string/initialCards"/>
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/titleInfos"
+            android:text="@string/remaining"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/separator"
+            app:layout_constraintTop_toBottomOf="@id/playerTwoDrawPrize"/>
 
-                    <ImageView
-                        style="@style/imageInfos"
-                        android:src="@drawable/cards"/>
 
-                    <TextView
-                        android:id="@+id/playerTwoPokemons"
-                        style="@style/textInfos"
-                        android:text="@string/initialPokemons"/>
+        <Button
+            android:id="@+id/playerTwoMinusCard"
+            style="@style/infosButton"
+            android:text="@string/minus"
+            app:layout_constraintEnd_toStartOf="@+id/imageView7"
+            app:layout_constraintStart_toEndOf="@+id/separator"
+            app:layout_constraintTop_toBottomOf="@id/textView3"/>
 
-                    <ImageView
-                        style="@style/imageInfos"
-                        android:src="@drawable/pokemon"/>
-                </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView7"
+            style="@style/imageInfosButton"
+            android:src="@drawable/cards"
+            app:layout_constraintEnd_toStartOf="@+id/playerTwoPlusCard"
+            app:layout_constraintStart_toEndOf="@id/playerTwoMinusCard"
+            app:layout_constraintTop_toBottomOf="@id/textView3"/>
 
-                <TextView
-                    android:id="@+id/playerTwoPrizes"
-                    style="@style/remainingPrize"
-                    android:text="@string/initialPrizes" />
+        <Button
+            android:id="@+id/playerTwoPlusCard"
+            style="@style/infosButton"
+            android:text="@string/plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@id/textView3" />
 
-                <Button
-                    android:id="@+id/playerTwoDrawPrize"
-                    style="@style/prizeButton"
-                    android:text="@string/prize" />
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/titleInfos"
+            android:text="@string/active"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/separator"
+            app:layout_constraintTop_toBottomOf="@id/imageView7"/>
 
-                <TextView
-                    style="@style/titleInfos"
-                    android:text="@string/remaining"/>
+        <Button
+            android:id="@+id/playerTwoMinusPokemon"
+            style="@style/infosButton"
+            android:text="@string/minus"
+            app:layout_constraintEnd_toStartOf="@id/imageView8"
+            app:layout_constraintStart_toEndOf="@id/separator"
+            app:layout_constraintTop_toBottomOf="@id/textView6"/>
 
-                <LinearLayout
-                    style="@style/infosButtonsContainer">
+        <ImageView
+            android:id="@+id/imageView8"
+            style="@style/imageInfosButton"
+            android:src="@drawable/pokemon"
+            app:layout_constraintEnd_toStartOf="@id/playerTwoPlusPokemon"
+            app:layout_constraintStart_toEndOf="@+id/playerTwoMinusPokemon"
+            app:layout_constraintTop_toBottomOf="@id/textView6"/>
 
-                    <Button
-                        android:id="@+id/playerTwoMinusCard"
-                        style="@style/infosButton"
-                        android:text="@string/minus"/>
+        <Button
+            android:id="@+id/playerTwoPlusPokemon"
+            style="@style/infosButton"
+            android:text="@string/plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@id/textView6"/>
 
-                    <ImageView
-                        style="@style/imageInfosButton"
-                        android:src="@drawable/cards"/>
-
-                    <Button
-                        android:id="@+id/playerTwoPlusCard"
-                        style="@style/infosButton"
-                        android:text="@string/plus"/>
-                </LinearLayout>
-
-                <TextView
-                    style="@style/titleInfos"
-                    android:text="@string/active"/>
-
-                <LinearLayout
-                    style="@style/infosButtonsContainer">
-
-                    <Button
-                        android:id="@+id/playerTwoMinusPokemon"
-                        style="@style/infosButton"
-                        android:text="@string/minus"/>
-
-                    <ImageView
-                        style="@style/imageInfosButton"
-                        android:src="@drawable/pokemon"/>
-
-                    <Button
-                        android:id="@+id/playerTwoPlusPokemon"
-                        style="@style/infosButton"
-                        android:text="@string/plus"/>
-                </LinearLayout>
-            </LinearLayout>
-
-    <Button
-        android:id="@+id/reset"
-        style="@style/resetButton"
-        android:layout_below="@id/separator"
-        android:text="@string/reset" />
-    </RelativeLayout>
+        <Button
+            android:id="@+id/reset"
+            style="@style/resetButton"
+            android:text="@string/reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator" />
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>

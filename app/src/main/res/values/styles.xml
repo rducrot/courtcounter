@@ -22,95 +22,92 @@
 
     <style name="mainView" parent="mainMatchParent">
         <item name="android:orientation">vertical</item>
-        <item name="android:background">@color/orangePrimary</item>
+        <item name="android:background">@color/colorLight</item>
     </style>
 
     <style name="logoImage">
         <item name="android:layout_width">@dimen/logoWidth</item>
         <item name="android:layout_height">@dimen/logoHeight</item>
-        <item name="android:layout_marginTop">@dimen/regularMargin</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginEnd">@dimen/mainMargin</item>
+        <item name="android:layout_marginStart">@dimen/mainMargin</item>
+        <item name="android:layout_marginTop">@dimen/mainMargin</item>
     </style>
 
-    <style name="playerContainer" parent="mainWrapContent">
-        <item name="android:orientation">vertical</item>
-        <item name="android:layout_weight">1</item>
-    </style>
 
     <style name="playerName">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/nameHeight</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:padding">@dimen/biggerPadding</item>
         <item name="android:textSize">@dimen/nameText</item>
-        <item name="android:textColor">@color/grey</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">sans-serif-medium</item>
-    </style>
-
-    <style name="informationsContainer">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:padding">@dimen/mainPadding</item>
+        <item name="android:layout_marginEnd">@dimen/mainMargin</item>
+        <item name="android:layout_marginStart">@dimen/mainMargin</item>
+        <item name="android:layout_marginTop">@dimen/mainMargin</item>
     </style>
 
     <style name="titleInfos">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_marginEnd">@dimen/mainMargin</item>
+        <item name="android:layout_marginStart">@dimen/mainMargin</item>
         <item name="android:layout_marginTop">@dimen/regularMargin</item>
     </style>
+
     <style name="textInfos">
         <item name="android:layout_width">@dimen/infosTextSize</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">@dimen/infosText</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_margin">@dimen/mainMargin</item>
         <item name="android:gravity">right</item>
+        <item name="android:layout_marginStart">@dimen/mainMargin</item>
+        <item name="android:layout_marginTop">@dimen/regularMargin</item>
     </style>
 
     <style name="imageInfos">
         <item name="android:layout_width">@dimen/infosImage</item>
         <item name="android:layout_height">@dimen/infosImage</item>
-        <item name="android:layout_marginRight">@dimen/biggerMargin</item>
+        <item name="android:layout_marginEnd">@dimen/regularMargin</item>
+        <item name="android:layout_marginStart">@dimen/regularMargin</item>
+        <item name="android:layout_marginTop">@dimen/mainMargin</item>
     </style>
 
     <style name="remainingPrize">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:textSize">@dimen/prizeText</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:layout_marginBottom">@dimen/regularMargin</item>
+        <item name="android:layout_marginEnd">@dimen/mainMargin</item>
+        <item name="android:layout_marginStart">@dimen/mainMargin</item>
+        <item name="android:layout_marginTop">@dimen/mainMargin</item>
     </style>
 
     <style name="prizeButton">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/orangeDark</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginLeft">@dimen/largeMargin</item>
-        <item name="android:layout_marginRight">@dimen/largeMargin</item>
+        <item name="android:layout_margin">@dimen/mainMargin</item>
     </style>
 
-    <style name="infosButtonsContainer">
-        <item name="android:layout_width">match_parent</item>
+    <style name="infosButton">
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">@dimen/regularPadding</item>
-        <item name="android:paddingRight">@dimen/regularPadding</item>
-    </style>
-
-    <style name="infosButton" parent="mainWrapContent">
         <item name="android:textColor">@color/orangeDark</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:layout_margin">@dimen/mainMargin</item>
+        <item name="android:layout_marginEnd">@dimen/mainMargin</item>
+        <item name="android:layout_marginStart">8dp</item>
     </style>
 
     <style name="imageInfosButton">
@@ -123,15 +120,11 @@
     <style name="resetButton" parent="mainWrapContent">
         <item name="android:textColor">@color/orangeDark</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_margin">@dimen/largerMargin</item>
-        <item name="android:layout_centerHorizontal">true</item>
     </style>
 
     <style name="separation">
         <item name="android:layout_width">2dp</item>
         <item name="android:layout_height">@dimen/separatorHeight</item>
         <item name="android:background">@color/colorPrimaryDark</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:layout_centerHorizontal">true</item>
     </style>
 </resources>
